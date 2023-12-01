@@ -1,19 +1,17 @@
-const SHEET_ID = "1pq6y-fA88ZJGA-kbianuUpe6Xyeol61lQT68nRhsHn0/edit#gid=0"
+const SHEET_ID = "1pq6y-fA88ZJGA-kbianuUpe6Xyeol61lQT68nRhsHn0"
 
 const ACCESS_TOKEN =
-"ya29.a0AfB_byDtenu996ijktVweplCfyYo9-pZdWc2SyftXWwJnASjGvODPul-ENA-V92AMrG-c_uTE0do4ofx33PIrjdOKmniUvx17QM9mKGTg8TS1mc9zUBgOywi-4mAlLaASEfOvJshPwMqqV4trBVndLi29X1VALqLgc5uaCgYKAW4SARMSFQHGX2MiSuEHf51vphKyZB6GOnwDLg0171"
+"ya29.a0AfB_byDz9_743wTcWY9OERY6mPLbuSJdtkY7J2ISWA6rTMz4iKnB6zyTv-gYWmJqJh5pYyxMf7jFObGBTFyKPmPlCvwF8Wx0P-qnP05HImSHLv7UvIjqUAFXUy_kduioN7saJ_Dev5Mo6uTKvFvQLoJmRz6_Vg5to1GjaCgYKAUUSARMSFQHGX2MisssEslW-CFbDZBpdeqOo1w0171"
 
 fetch(
   // Obtenemos los datos de la planilla, de la hoja hojaMenu, columnas A y B desde la segunda fila
-  `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/rutina!A2:D`,
+  `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/rutinas!A1:D`,
   {
     headers: {
-      "Access-Control-Allow-Origin":"http://localhost:3000/",
       "Content-Type": "application/json",
       Authorization: `Bearer ${ACCESS_TOKEN}`,
     },
   }
-//esperamos el response
 )
 .then(function (response) {
     //esperamos el json del response para poder utilizarlo
